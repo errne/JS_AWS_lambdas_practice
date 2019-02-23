@@ -4,6 +4,7 @@ const AWS = require('aws-sdk');
 const ddb = new AWS.DynamoDB.DocumentClient();
 
 exports.updateClient = function(event, context, callback){
+  // TODO: map all the objects 
 	const id = event.id;
 	const params = {
 		TableName : process.env.TABLE_NAME,

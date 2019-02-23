@@ -5,6 +5,7 @@ const uuid = require('uuid');
 const ddb = new AWS.DynamoDB.DocumentClient();
 
 exports.createOneClient = function(event, context, callback){
+  // TODO: map all the objects
   const address = {
     "address1": event.address.address1,
     "address2": event.address.address2,
