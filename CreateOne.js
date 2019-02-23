@@ -12,13 +12,11 @@ exports.createOneClient = function(event, context, callback){
     "address4": event.address.address4
   };
   const projects = {
-    "active50":event.projects.active50,
+    "active90":event.projects.active50,
     "counselling":event.projects.counselling,
-    "grouptherapy":event.projects.grouptherapy,
     "toddler":event.projects.toddler,
-    "survivors":event.projects.survivors,
     "personaldevelopment":event.projects.personaldevelopment,
-    "leithcafe":event.projects.leithcafe,
+    "cafe":event.projects.leithcafe,
     "smart":event.projects.smart,
     "other":event.projects.other
   };
@@ -37,7 +35,6 @@ exports.createOneClient = function(event, context, callback){
       "projects": projects,
       "employment":event.employment,
       "leavemessage":event.leavemessage,
-      "fromfeniks":event.fromfeniks,
       "mailing":event.mailing,
       "hear":event.hear
     },
