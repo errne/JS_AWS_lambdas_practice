@@ -6,9 +6,6 @@ const ddb = new AWS.DynamoDB.DocumentClient();
 
 exports.createOneClient = function(event, context, callback){
 
-    const address = event.address;
-    const projects = event.projects;
-
     const client = event;
     client["id"] = uuid.v1();
     const params = {
