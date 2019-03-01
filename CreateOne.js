@@ -2,7 +2,7 @@
 
 const AWS = require('aws-sdk');
 const uuid = require('uuid');
-const ddb = new AWS.DynamoDB.DocumentClient();
+const ddb = new AWS.DynamoDB.DocumentClient({convertEmptyValues : true });
 
 exports.createOneClient = function(event, context, callback){
 
@@ -15,4 +15,4 @@ exports.createOneClient = function(event, context, callback){
 	ddb.put(params, function(err, data){
 		callback(err, data);
 	});
-}
+};
